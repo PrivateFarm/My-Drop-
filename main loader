@@ -1,0 +1,107 @@
+-- For Midnight's Drop Only ;)
+-- Best Drop Ever IKR!
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local Reviz = Instance.new("TextButton")
+local Equip = Instance.new("TextButton")
+local Drop = Instance.new("TextButton")
+local Credits = Instance.new("TextLabel")
+local Afk = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.816805482, 0, 0.457975954, 0)
+Frame.Size = UDim2.new(0, 161, 0, 251)
+Frame.Active = true
+Frame.Draggable = true
+
+UICorner.Parent = Frame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(112, 112, 112)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = Frame
+
+Reviz.Name = "Reviz"
+Reviz.Parent = Frame
+Reviz.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reviz.BackgroundTransparency = 1.000
+Reviz.Position = UDim2.new(0.0931676999, 0, 0.152226046, 0)
+Reviz.Size = UDim2.new(0, 131, 0, 50)
+Reviz.Font = Enum.Font.GothamBlack
+Reviz.Text = "Admin"
+Reviz.TextColor3 = Color3.fromRGB(198, 198, 198)
+Reviz.TextSize = 36.000
+Reviz.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/pGhYnsxA", true))()
+end)
+
+Equip.Name = "Equip"
+Equip.Parent = Frame
+Equip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Equip.BackgroundTransparency = 1.000
+Equip.Position = UDim2.new(0.0931676999, 0, 0.35634163, 0)
+Equip.Size = UDim2.new(0, 131, 0, 50)
+Equip.Font = Enum.Font.GothamBlack
+Equip.Text = "Equip"
+Equip.TextColor3 = Color3.fromRGB(198, 198, 198)
+Equip.TextSize = 44.000
+Equip.MouseButton1Click:connect(function()
+	_G.Equip = true
+	while _G.Equip do
+		wait(0.2)
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.Name == "Double Weight" then v:Activate()
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end
+end)
+
+Drop.Name = "Drop"
+Drop.Parent = Frame
+Drop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Drop.BackgroundTransparency = 1.000
+Drop.Position = UDim2.new(0.0931676999, 0, 0.55335933, 0)
+Drop.Size = UDim2.new(0, 131, 0, 50)
+Drop.Font = Enum.Font.GothamBlack
+Drop.Text = "Drop"
+Drop.TextColor3 = Color3.fromRGB(198, 198, 198)
+Drop.TextSize = 40.000
+Drop.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/CjVD4RZN", true))()
+end)
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0, 0, -0.00398406386, 0)
+Credits.Size = UDim2.new(0, 161, 0, 39)
+Credits.Font = Enum.Font.GothamBlack
+Credits.Text = "Midnight's Drop"
+Credits.TextColor3 = Color3.fromRGB(198, 198, 198)
+Credits.TextSize = 22.000
+Credits.TextWrapped = true
+
+Afk.Name = "Afk"
+Afk.Parent = Frame
+Afk.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Afk.BackgroundTransparency = 1.000
+Afk.Position = UDim2.new(0.0931676999, 0, 0.749004126, 0)
+Afk.Size = UDim2.new(0, 131, 0, 50)
+Afk.Font = Enum.Font.GothamBlack
+Afk.Text = "Anti Afk"
+Afk.TextColor3 = Color3.fromRGB(198, 198, 198)
+Afk.TextSize = 30.000
+Afk.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/SN4agUmB", true))()
+end)
